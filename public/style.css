@@ -1,0 +1,397 @@
+:root {
+  --clr-black: #000;
+  --clr-orange: #ffbf69;
+  --clr-white: #fff;
+  --clr-gray: #333;
+  --clr-cyan: #cbf3f0;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+  color: var(--clr-black);
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  border: 0;
+}
+
+/* Navbar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 1.125rem;
+  background-color: var(--clr-orange);
+}
+
+.navbar__logo {
+  min-width: max-content;
+  font-size: 2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  z-index: 999;
+}
+
+.navbar-list {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  gap: 4rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  list-style: none;
+  transition-duration: 500;
+}
+
+.navbar-list .navbar-list__menu:hover {
+  color: var(--clr-white);
+  cursor: pointer;
+}
+
+.hamburger {
+  display: none;
+  position: relative;
+  width: 44px;
+  height: 44px;
+  z-index: 999;
+}
+
+.hamburger img {
+  width: 2.125rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hamburger input[type='checkbox'] {
+  opacity: 0;
+  position: absolute;
+  top: -3px;
+  left: -4px;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 99;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 9;
+  }
+  .navbar-list {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: -1.25rem;
+    gap: 1rem;
+    padding-left: 2.125rem;
+    padding-top: 4.5rem;
+    background-color: var(--clr-white);
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    font-size: 20px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3);
+  }
+  .navbar-list .navbar-list__menu {
+    margin-block: 1rem;
+  }
+  .navbar-list .navbar-list__menu:hover {
+    color: var(--clr-orange);
+  }
+  .navbar-list.unhide {
+    display: block;
+  }
+  .hamburger {
+    display: block;
+  }
+  .hamburger .hamburger__close {
+    width: 30px;
+    display: none;
+  }
+  .hamburger .hamburger__open.close {
+    display: none;
+  }
+  .hamburger .hamburger__close.open {
+    display: block;
+  }
+}
+
+/* Main Banner */
+.main-banner {
+  display: flex;
+  background-color: var(--clr-orange);
+}
+
+.description {
+  margin-top: 70px;
+  color: #fff;
+  flex: 1;
+}
+
+.description__title {
+  font-size: 148px;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-left: -6px;
+}
+
+.description__text {
+  width: 52ch;
+  margin-bottom: 44px;
+  font-weight: 600;
+  font-size: 16.4px;
+}
+
+.illustration {
+  flex: 1;
+  max-width: 850px;
+}
+
+.illustration img {
+  width: 100%;
+}
+
+@media (max-width: 1276px) {
+  .main-banner {
+    padding-block: 94px;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .description__title {
+    margin-left: 0;
+  }
+
+  .description__text {
+    width: initial;
+    padding-inline: 2rem;
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 586px) {
+  .description__title {
+    font-size: 94px;
+  }
+}
+
+/* About Section */
+
+.about-section {
+  margin-block: 5.875rem;
+  text-align: center;
+}
+
+.about-section__title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about-section__description {
+  margin-inline: 8rem;
+}
+
+@media (max-width: 1060px) {
+  .about-section__description {
+    margin-inline: 0;
+  }
+}
+
+/* Product Section */
+
+.product-section {
+  background-color: var(--clr-cyan);
+  padding-block: 5.875rem;
+  text-align: center;
+}
+
+.product-section__title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.card-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.card__image {
+  max-width: 220px;
+  margin-block: 1rem;
+}
+
+.card__description {
+  margin-bottom: 1rem;
+}
+
+/* Testimony section */
+
+.testimony-section {
+  background-image: url('/images/bg-grid.png');
+  background-position: left bottom;
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+
+.testimony-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 5.875rem;
+  gap: 60px;
+}
+
+.testimony-description {
+  flex: 2;
+}
+
+.testimony-description__title {
+  margin-bottom: 1.125rem;
+}
+
+.testimony-image {
+  flex: 1.2;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+@media (max-width: 1320px) {
+  .testimony-section {
+    background-image: none;
+  }
+}
+
+@media (max-width: 1060px) {
+  .testimony-wrapper {
+    flex-direction: column;
+  }
+  .testimony-image img {
+    width: 100%;
+  }
+}
+
+/* Footer */
+
+.footer {
+  padding-block: 1.25rem;
+  background-color: var(--clr-gray);
+  color: var(--clr-white);
+}
+
+.footer-list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.footer-list .footer-list__item {
+  margin-right: 40px;
+}
+
+@media (max-width: 666px) {
+  .footer-list {
+    flex-direction: column;
+    text-align: center;
+    font-size: 1.125rem;
+    gap: 0.75rem;
+  }
+}
+
+/* utillities */
+
+.padding-inline {
+  padding-inline: 72px;
+}
+
+@media (max-width: 768px) {
+  .padding-inline {
+    padding-inline: 32px;
+  }
+}
+
+.btn {
+  padding-inline: 2.75rem;
+  padding-block: 0.5rem;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn--cyan {
+  background-color: var(--clr-cyan);
+}
+
+.btn--orange {
+  background-color: var(--clr-orange);
+}

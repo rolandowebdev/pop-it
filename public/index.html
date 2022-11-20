@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <!-- JS -->
+    <script src="script.js" defer></script>
+    <title>Pop It!</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar | padding-inline">
+      <a class="navbar__logo" href="#"
+        >pop it!</a
+      >
+      <div class="hamburger">
+        <input type="checkbox" onchange="hamburgerAction(this)" />
+        <img
+          class="hamburger__open"
+          src="/assets/icons/hamburger.svg"
+          alt="hamburger icon" />
+        <img
+          class="hamburger__close"
+          src="/assets/icons/close.svg"
+          alt="close icon" />
+      </div>
+      <ul class="navbar-list">
+        <li class="navbar-list__menu">Home</li>
+        <li class="navbar-list__menu">About</li>
+        <li class="navbar-list__menu">Contact</li>
+      </ul>
+    </nav>
+    <!-- End Navbar -->
+
+    <!-- Main Banner -->
+    <section class="main-banner | padding-inline">
+      <div class="description" data-aos="fade" data-aos-duration="1000">
+        <h1 class="description__title">pop it!</h1>
+        <p class="description__text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi beatae
+          totam tempore.
+        </p>
+        <button class="btn btn--cyan">click</button>
+      </div>
+      <div class="illustration" data-aos="fade" data-aos-duration="1000">
+        <img src="/assets/images/background.png" alt="illustration" />
+      </div>
+    </section>
+    <!-- End Main Banner -->
+
+    <!-- About -->
+    <section class="about-section | padding-inline">
+      <h2 class="about-section__title" data-aos="fade" data-aos-duration="1000">
+        Lorem ipsum dolor sit.
+      </h2>
+      <p
+        class="about-section__description"
+        data-aos="fade-up"
+        data-aos-duration="1300">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. At temporibus
+        illo numquam explicabo ipsa ex beatae, aliquam animi nesciunt quas a
+        ratione alias nam sint dolores amet sequi. Odit placeat quis ducimus,
+        suscipit molestias quas tenetur natus ipsam, repudiandae velit quod
+        quaerat error est! Eligendi nihil aperiam ratione possimus. Nemo?
+      </p>
+    </section>
+    <!-- End About -->
+
+    <!-- Product -->
+    <section class="product-section | padding-inline">
+      <h2
+        class="product-section__title"
+        data-aos="fade"
+        data-aos-duration="100">
+        Lorem ipsum dolor sit.
+      </h2>
+      <div class="card-wrapper">
+        <div class="card">
+          <img
+            class="card__image"
+            src="/assets/images/square.png"
+            alt="square"
+            data-aos="fade"
+            data-aos-duration="1300" />
+          <p
+            class="card__description"
+            data-aos="fade-up"
+            data-aos-duration="1500">
+            Lorem ipsum dolor sit amet.
+          </p>
+          <button
+            class="btn btn--orange"
+            data-aos="fade-up"
+            data-aos-duration="1700">
+            click
+          </button>
+        </div>
+        <div class="">
+          <img
+            class="card__image"
+            src="/assets/images/amongus.png"
+            alt="among us"
+            data-aos="fade"
+            data-aos-duration="1300" />
+          <p
+            class="card__description"
+            data-aos="fade-up"
+            data-aos-duration="1500">
+            Lorem ipsum dolor sit amet.
+          </p>
+          <button
+            class="btn btn--orange"
+            data-aos="fade-up"
+            data-aos-duration="1700">
+            click
+          </button>
+        </div>
+        <div class="">
+          <img
+            class="card__image"
+            src="/assets/images/round.png"
+            alt="round"
+            data-aos="fade"
+            data-aos-duration="1300" />
+          <p
+            class="card__description"
+            data-aos="fade-up"
+            data-aos-duration="1500">
+            Lorem ipsum dolor sit amet.
+          </p>
+          <button
+            class="btn btn--orange"
+            data-aos="fade-up"
+            data-aos-duration="1700">
+            click
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- End Product -->
+
+    <!-- Testimony Description -->
+    <section class="testimony-section | padding-inline">
+      <div
+        class="testimony-wrapper"
+        data-aos="fade-right"
+        data-aos-duration="1500">
+        <div class="testimony-description">
+          <h2 class="testimony-description__title">Lorem ipsum.</h2>
+          <p class="testimony-description__text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias nisi
+            dignissimos tenetur in molestiae minus reprehenderit aspernatur
+            consectetur, ipsum sit. Officia libero nisi repudiandae, magni
+            architecto nulla earum quam totam ut dolorum mollitia praesentium
+            porro corporis inventore quisquam, sit sint ratione nam! Dolorum
+            debitis quaerat dolorem blanditiis molestiae sint minima?
+          </p>
+        </div>
+        <div
+          class="testimony-image"
+          data-aos="fade-left"
+          data-aos-duration="1500">
+          <img src="/assets/images/photo.jpg" alt="product" />
+        </div>
+      </div>
+    </section>
+    <!-- End Testimony Description -->
+
+    <!-- Footer -->
+    <footer class="footer | padding-inline">
+      <ul class="footer-list data-aos="fade" data-aos-duration="1300">
+        <li class="footer-list__item">Lorem, ipsum.</li>
+        <li class="footer-list__item">Lorem, ipsum.</li>
+        <li class="footer-list__item">Lorem.</li>
+        <li class="footer-list__item">Lorem.</li>
+        <li class="footer-list__item">Lorem, ipsum.</li>
+      </ul>
+    </footer>
+    <!-- End Footer -->
+  </body>
+</html>
